@@ -1,62 +1,82 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_cents(void);
-int calculate_quarters(int cents);
-int calculate_dimes(int cents);
-int calculate_nickels(int cents);
-int calculate_pennies(int cents);
-
 int main(void)
 {
-
-    int cents = get_cents();
-
-
-    int quarters = calculate_quarters(cents);
-    cents = cents - quarters * 25;
-
-
-    int dimes = calculate_dimes(cents);
-    cents = cents - dimes * 10;
-
-
-    int nickels = calculate_nickels(cents);
-    cents = cents - nickels * 5;
+    int n = 0;
+    do
+    {
+     do
+    {
+    n = get_int("How big should the pyramid be? ");
+    }
+    while(n < 1);
+    }
+    while(n > 8);
 
 
-    int pennies = calculate_pennies(cents);
-    cents = cents - pennies * 1;
-
-
-    int coins = quarters + dimes + nickels + pennies;
-
-
-    printf("%i\n", coins);
-}
-
-int get_cents(void)
+if(n == 8)
 {
-    int cents = get_int("How much do I owe you? ");
-    return cents;
+      printf("       #\n");
+      printf("      ##\n");
+      printf("     ###\n");
+      printf("    ####\n");
+      printf("   #####\n");
+      printf("  ######\n");
+      printf(" #######\n");
+      printf("########\n");
 }
 
-int calculate_quarters(int cents)
+if(n == 7)
 {
-    return cents / 25;
+      printf("       #\n");
+      printf("      ##\n");
+      printf("     ###\n");
+      printf("    ####\n");
+      printf("   #####\n");
+      printf("  ######\n");
+      printf(" #######\n");
 }
 
-int calculate_dimes(int cents)
+if(n == 6)
 {
-    return cents / 10;
+      printf("       #\n");
+      printf("      ##\n");
+      printf("     ###\n");
+      printf("    ####\n");
+      printf("   #####\n");
+      printf("  ######\n");
 }
-
-int calculate_nickels(int cents)
+  if(n == 5)
 {
-    return cents / 5;
+      printf("       #\n");
+      printf("      ##\n");
+      printf("     ###\n");
+      printf("    ####\n");
+      printf("   #####\n");
 }
-
-int calculate_pennies(int cents)
+  if(n == 4)
 {
-    return cents;
+      printf("   #\n");
+      printf("  ##\n");
+      printf(" ###\n");
+      printf("####\n");
 }
+  if(n == 3)
+{
+      printf("  #\n");
+      printf(" ##\n");
+      printf("###\n");
+}
+  if(n == 2)
+{
+      printf(" #\n");
+      printf("##\n");
+}
+  if(n == 1)
+{
+      printf("#\n");
+}
+}
+//run make mario
+//./mario
